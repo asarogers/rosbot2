@@ -43,5 +43,39 @@ def generate_launch_description():
             name="rviz2_node",
             arguments=['-d', rviz_config],
 
-        )
+        ),Node(
+        #     package='rplidar_ros',
+        #     executable='rplidar_node',
+        #     name='rplidar_node',
+        #     output='screen',
+        #     parameters=[{
+        #         'serial_port': '/dev/ttyRPLIDAR',
+        #         'serial_baudrate': 115200,
+        #         'frame_id': 'laser_frame',
+        #     }]
+        # ),
+        Node(
+            package="rosbot",
+            executable="lidar_node",
+            name="lidar_node",
+        ),
+        # Node(
+        #     package='rplidar_ros',
+        #     executable='rplidar_node',
+        #     name='rplidar_node',
+        #     output='screen',
+        #     parameters=[{Node(
+        #     package='rplidar_ros',
+        #     executable='rplidar_node',
+        #     name='rplidar_node',
+        #     output='screen',
+        #     parameters=[{
+        #         'serial_port': '/dev/ttyRPLIDAR',
+        #         'serial_baudrate': 115200,
+        #         'frame_id': 'laser_frame',
+        #     }]
+        # ),
+        #         'frame_id': 'laser_frame',
+        #     }]
+        # ),
     ])
